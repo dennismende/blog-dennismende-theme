@@ -1847,6 +1847,10 @@ iframe.instagram-media + script + :not([id]) {
     text-decoration: none;
 }
 
+.site-footer-nav {
+    text-align: right;
+}
+
 .site-footer-nav ul {
     display: flex;
     justify-content: center;

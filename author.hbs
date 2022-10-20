@@ -46,11 +46,20 @@
                     {{#if website}}
                         <a class="author-profile-social-link" href="{{website}}" target="_blank" rel="noopener">{{website}}</a>
                     {{/if}}
-                    {{#if twitter}}
-                        <a class="author-profile-social-link" href="{{twitter_url}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                    {{#if @custom.linkedin_page}}
+                        <a class="author-profile-social-link" href="{{@custom.linkedin_page}}" title="Youtube" target="_blank" rel="me noopener">{{> "icons/linkedin"}}</a>
                     {{/if}}
-                    {{#if facebook}}
-                        <a class="author-profile-social-link" href="{{facebook_url}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                    {{#if @custom.instagram_page}}
+                        <a class="author-profile-social-link" href="{{@custom.instagram_page}}" title="Instagram" target="_blank" rel="me noopener">{{> "icons/instagram"}}</a>
+                    {{/if}}
+                    {{#if @custom.youtube_page}}
+                        <a class="author-profile-social-link" href="{{@custom.youtube_page}}" title="Youtube" target="_blank" rel="me noopener">{{> "icons/youtube"}}</a>
+                    {{/if}}
+                    {{#if @site.twitter}}
+                        <a class="author-profile-social-link" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="me noopener">{{> "icons/twitter"}}</a>
+                    {{/if}}
+                    {{#if @site.facebook}}
+                        <a class="author-profile-social-link" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="me noopener">{{> "icons/facebook"}}</a>
                     {{/if}}
                 </div>
             </footer>

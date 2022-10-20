@@ -13,6 +13,8 @@
     this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ebeeaaa6-7969-494b-84e3-a6b99eb263ea" data-blockingmode="auto" type="text/javascript"></script>
+
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
     {{ghost_head}}
@@ -47,11 +49,20 @@
             <div class="gh-head-actions">
                 <button class="gh-search" data-ghost-search>{{> "icons/search"}}</button>
                 <div class="gh-social">
-                    {{#if @site.facebook}}
-                        <a class="gh-social-link gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="me noopener">{{> "icons/facebook"}}</a>
+                    {{#if @custom.linkedin_page}}
+                        <a class="gh-social-link" href="{{@custom.linkedin_page}}" title="Youtube" target="_blank" rel="me noopener">{{> "icons/linkedin"}}</a>
+                    {{/if}}
+                    {{#if @custom.instagram_page}}
+                        <a class="gh-social-link" href="{{@custom.instagram_page}}" title="Instagram" target="_blank" rel="me noopener">{{> "icons/instagram"}}</a>
+                    {{/if}}
+                    {{#if @custom.youtube_page}}
+                        <a class="gh-social-link" href="{{@custom.youtube_page}}" title="Youtube" target="_blank" rel="me noopener">{{> "icons/youtube"}}</a>
                     {{/if}}
                     {{#if @site.twitter}}
                         <a class="gh-social-link gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="me noopener">{{> "icons/twitter"}}</a>
+                    {{/if}}
+                    {{#if @site.facebook}}
+                        <a class="gh-social-link gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="me noopener">{{> "icons/facebook"}}</a>
                     {{/if}}
                 </div>
                 {{#if @site.members_enabled}}
@@ -75,7 +86,10 @@
         <div class="inner">
             <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
             <nav class="site-footer-nav">
-                {{navigation type="secondary"}}
+                <a href="{{@site.url}}">Latest Posts</a>
+                <a href="javascript: Cookiebot.renew()">Cookie Settings</a>
+                <a href="{{@site.url}}/data-privacy-policy/">Data Privacy Policy</a>
+                <a href="{{@site.url}}/legal-disclosure/">Legal Disclosure</a>
             </nav>
             <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
         </div>

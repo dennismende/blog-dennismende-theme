@@ -122,7 +122,7 @@
             },
             "show_logo_in_navigation": {
                 "type": "boolean",
-                "default": false,
+                "default": true,
                 "group": "homepage"
             },
             "feed_layout": {
@@ -142,7 +142,7 @@
                     "Dark",
                     "Auto"
                 ],
-                "default": "Light"
+                "default": "Dark"
             },
             "post_image_style": {
                 "type": "select",
@@ -164,6 +164,18 @@
                 "type": "boolean",
                 "default": true,
                 "group": "post"
+            },
+            "instagram_page": {
+                "type": "text",
+                "default": ""
+            },
+            "youtube_page": {
+                "type": "text",
+                "default": ""
+            },
+            "linkedin_page": {
+                "type": "text",
+                "default": ""
             }
         }
     },
